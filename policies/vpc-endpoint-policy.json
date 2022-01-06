@@ -1,0 +1,16 @@
+{
+  "Version": "2012-10-17",
+  "Id": "Policy1415115909151",
+  "Statement": [
+    { "Sid": "Access-to-specific-bucket-only",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Effect": "Allow",
+      "Resource": ["arn:aws:s3:::radkowski-test-vpc-endpoint",
+                   "arn:aws:s3:::radkowski-test-vpc-endpoint/*"]
+    }
+  ]
+}
